@@ -111,7 +111,11 @@ add the following line to the file
 ```
 now you can access the service using the host name
 
-Also, this ingress controller has a default backend, which is a service that handles all URL paths and hosts the ingress controller doesn't understand. Which you can check by going to the host name you have given in the browser, you will see the default backend service running or by command:
+Also, this ingress controller has a default backend, which is a service that handles all URL paths and hosts the ingress controller doesn't understand. Create a default backend service by:
+```
+kubectl apply -f default-backend.yaml
+```
+Which you can check by going to the host name you have given in the browser, you will see the default backend service running or by command:
 ```
 kubectl describe ingress <ingress name> -n <namespace>
 ```
