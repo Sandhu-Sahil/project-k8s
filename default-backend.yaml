@@ -1,4 +1,4 @@
-apiverson: v1
+apiVerson: v1
 kind: Service
 metadata:
   name: default-http-backend
